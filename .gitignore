@@ -1,0 +1,23 @@
+# Secrets (never commit API keys)
+.env
+.env.*
+*.pem
+*.key
+
+# Build / packaging output (upload zips go in GitHub Releases or stay local)
+*.zip
+*.crx
+node_modules/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code local files
+.claude/
+
+# Store screenshots stay local until final (they show real creators); remove this line to publish them
+store-package/screenshots/

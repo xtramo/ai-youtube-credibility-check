@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AI YouTube Credibility Check",
+  "version": "0.2.0",
+  "description": "Bring your own AI key (Claude, ChatGPT, Gemini, Mistral...). Get a credibility verdict with 4 reasons for any YouTube video.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://api.anthropic.com/*",
+    "https://api.openai.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://api.mistral.ai/*",
+    "https://api.x.ai/*",
+    "https://api.meta.ai/*"
+  ],
+  "optional_host_permissions": ["https://*/*", "http://localhost/*", "http://127.0.0.1/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    { "matches": ["https://www.youtube.com/*"], "js": ["providers.js", "content.js"], "css": ["panel.css"], "run_at": "document_idle" }
+  ],
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": {
+    "default_title": "Credibility Check settings",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  }
+}

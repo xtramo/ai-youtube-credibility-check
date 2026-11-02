@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>AI YouTube Credibility Check - Settings</title>
+<style>
+  body{font:15px system-ui;max-width:520px;margin:40px auto;padding:0 16px}
+  input,select{width:100%;padding:8px;margin:4px 0 14px;box-sizing:border-box}
+  button{padding:8px 16px}
+  .muted{color:#666}
+</style>
+<h2>AI YouTube Credibility Check</h2>
+<p class="muted">Pick the AI you already use and paste your own API key. Your key stays in this browser and is sent only to that provider. Each check costs a fraction of a cent.</p>
+<label>AI provider<select id="provider"></select></label>
+<label>API key <a id="getkey" href="#" target="_blank" rel="noreferrer">(get one)</a>
+  <input id="key" type="password"></label>
+<label>Model <span class="muted">(optional, leave blank for default)</span><input id="model"></label>
+<div id="custom" hidden>
+  <label>API base URL <span class="muted">(e.g. https://api.groq.com/openai/v1 or http://localhost:11434/v1)</span><input id="base"></label>
+</div>
+<p class="muted"><b>About costs:</b> the dollar amounts shown are approximate estimates based on built-in prices that may be out of date or wrong. They are not verified latest prices. Your AI provider's billing page is the only source of truth. You can enter your own prices below.</p>
+<label>Price per 1M input tokens, USD <span class="muted">(optional override; needed for models not in the built-in price list)</span><input id="pin" type="number" step="any" min="0"></label>
+<label>Price per 1M output tokens, USD<input id="pout" type="number" step="any" min="0"></label>
+<p class="muted" id="spent"></p>
+<button id="save">Save</button> <span id="ok"></span>
+<p class="muted" style="margin-top:32px">Free and open source. Made by <a href="https://waynehross.com/?utm_source=extension&utm_medium=options&utm_campaign=ai-youtube-credibility" target="_blank" rel="noreferrer">waynehross.com</a></p>
+<script src="providers.js"></script>
+<script src="options.js"></script>
