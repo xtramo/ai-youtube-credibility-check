@@ -79,6 +79,10 @@ Show an AI-generated credibility assessment of the YouTube video the user is wat
 - Optional small promo tile 440x280.
 
 ## Submission checklist
+
+**Status (6 Nov 2026): v0.2.0 is PUBLISHED - public** (created 2 Nov, updated 3 Nov). Store URL: https://chromewebstore.google.com/detail/ankejgmoabdmmpecjjdcfajknegkpidc (ID `ankejgmoabdmmpecjjdcfajknegkpidc`). Steps 1, 2 and 5 are done (GitHub Pages is live and the privacy policy loads). Steps 3 and 4 are still open; see `TODO.md`. The steps below are kept as the checklist for future releases.
+
+Note: the dashboard's Summary field is read from `description` in `manifest.json` ("from package"), not from the Summary text above. To change it, edit the manifest and upload a new version.
 1. Enable GitHub Pages: repo Settings > Pages > Source "Deploy from a branch", branch `main`, folder `/docs`. After a minute, open the privacy policy URL above to confirm it loads. (The contact email, ytcredibility@waynehross.com, is already filled in.)
 2. Pay the one-time $5 developer registration fee.
 3. Re-check the built-in prices in `providers.js` (`PRICES`) against each provider's pricing page. Claude, Grok, OpenAI, Gemini and Mistral were read from the providers' pricing pages on 2 Nov 2026 (Mistral lists "Mistral Small 4"; the `-latest` alias is unconfirmed); Muse Spark is the launch price as reported by news sites. The OpenAI default is `gpt-4.1-mini` because `gpt-4o-mini` is marked deprecated. The disclaimer already says costs are approximate, but re-check before each release.

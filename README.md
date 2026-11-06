@@ -11,6 +11,8 @@ A Chrome extension that tells you, in seconds, whether a YouTube video is worth 
 
 It is **bring your own AI**: you paste your own API key, so there is no subscription, no account and no server.
 
+**Install from the Chrome Web Store:** https://chromewebstore.google.com/detail/ankejgmoabdmmpecjjdcfajknegkpidc
+
 Source: https://github.com/xtramo/ai-youtube-credibility-check
 
 > Results are AI opinions based on the video's transcript, not fact-checks. Verify important claims yourself.
@@ -29,7 +31,7 @@ Source: https://github.com/xtramo/ai-youtube-credibility-check
 
 Only Claude has been tested end to end so far. If another provider fails, please open an issue with the error text.
 
-## Install (developer mode)
+## Install (developer mode, for testing or contributing)
 
 1. Download or clone this repo.
 2. Open `chrome://extensions` and turn on **Developer mode**.
@@ -48,7 +50,7 @@ The analyst prompt (see `background.js`) tells the model to stick to what is in 
 
 ## Privacy
 
-No servers, no analytics, no tracking. Your API key is stored locally in your browser (`chrome.storage.local`). The video's title, channel and transcript go only to the provider you choose, only when you click the button. Full policy: [`docs/privacy-policy.html`](docs/privacy-policy.html) (published at https://xtramo.github.io/ai-youtube-credibility-check/privacy-policy.html once GitHub Pages is enabled).
+No servers, no analytics, no tracking. Your API key is stored locally in your browser (`chrome.storage.local`). The video's title, channel and transcript go only to the provider you choose, only when you click the button. Full policy: [`docs/privacy-policy.html`](docs/privacy-policy.html) (published at https://xtramo.github.io/ai-youtube-credibility-check/privacy-policy.html).
 
 ## About the costs shown
 
@@ -65,6 +67,7 @@ Dollar amounts are **approximate estimates from built-in prices that may be out 
 - `ai-youtube-credibility-check/`: the extension (Manifest V3, no build step, no dependencies)
 - `docs/`: privacy policy page (served by GitHub Pages)
 - `store-package/`: Chrome Web Store listing text (the upload zip is kept local)
+- `TODO.md`: status and next steps
 
 ## Contributing
 
